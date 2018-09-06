@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 36e2d7bd98c0c894392ed7494bc1cc1b
-timeCreated: 1534185121
+guid: 2357eb7a7f46c9246af8b489a1fcbd5a
+timeCreated: 1536257263
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -13,7 +13,8 @@ ModelImporter:
     100010: pasted__pTorus1
     100012: pasted__pTorus1 1
     100014: pCube1
-    100016: pTorus1
+    100016: pPlane1
+    100018: pTorus1
     400000: //RootNode
     400002: group
     400004: group1
@@ -22,22 +23,26 @@ ModelImporter:
     400010: pasted__pTorus1
     400012: pasted__pTorus1 1
     400014: pCube1
-    400016: pTorus1
+    400016: pPlane1
+    400018: pTorus1
     2300000: pasted__pasted__pTorus1
     2300002: pasted__pTorus1
     2300004: pasted__pTorus1 1
     2300006: pCube1
-    2300008: pTorus1
+    2300008: pPlane1
+    2300010: pTorus1
     3300000: pasted__pasted__pTorus1
     3300002: pasted__pTorus1
     3300004: pasted__pTorus1 1
     3300006: pCube1
-    3300008: pTorus1
+    3300008: pPlane1
+    3300010: pTorus1
     4300000: pCube1
     4300002: pTorus1
     4300004: pasted__pTorus1
     4300006: pasted__pTorus1
     4300008: pasted__pasted__pTorus1
+    4300010: pPlane1
     9500000: //RootNode
   materials:
     importMaterials: 1

@@ -4,23 +4,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
-	public GameObject[] windows;
-	public GameObject[] whiteArcs;
-	public GameObject[] whiteInstructionsArcs;
-	public GameObject[] instructionsWindows;
-	public GameObject[] whitePlayArcs;
-	private int activeWindow;
-	private int activeInstructionsWindow;
+	public GameObject[] windows, whiteArcs, whiteInstructionsArcs, instructionsWindows, whitePlayArcs;
+	private int activeWindow, activeInstructionsWindow, actualAction, actualInstructionsAction, actualPlayAction;
+	private bool movingHorizontal, movingVertical, pressingEnter, pressingCancel;
 
-	private int actualAction;
-	private int actualInstructionsAction;
-	private int actualPlayAction;
-
-	private bool movingHorizontal;
-	private bool movingVertical;
-	private bool pressingEnter;
-	private bool pressingCancel;
-	
 	[HideInInspector]
 	public int selectedLevel;
 
