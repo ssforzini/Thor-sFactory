@@ -20,9 +20,4 @@ public class EnergyContainer : MonoBehaviour {
 			gameObject.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.FreezeAll;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
