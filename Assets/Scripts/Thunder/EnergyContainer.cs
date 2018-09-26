@@ -29,6 +29,26 @@ public class EnergyContainer : MonoBehaviour {
 		ps.gameObject.SetActive (false);
 	}
 
+	void Update(){
+		if (containerPositionArray != 0) {
+			if (lm.containerStepArray [containerPositionArray - 1] == "-") {
+				hasEnergy = false;
+				containerPositionArray = 0;
+			}
+
+			if (lm.checkLastOne (containerPositionArray)) {
+				ps.gameObject.SetActive (false);
+			}
+		} else if(containerPositionArray == 0 && hasEnergy) {
+			hasEnergy = false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.U)) {
+			Debug.Log (gameObject.name + " energia: " + hasEnergy.ToString() + ", posicion: " + containerPositionArray.ToString());
+
+		}
+	}
+
 	private void OnTriggerEnter(Collider other){
 		if (other.tag == "EnergyContainer") {
 			if(hasEnergy){
@@ -62,7 +82,14 @@ public class EnergyContainer : MonoBehaviour {
 
 	private void OnTriggerExit(Collider other){
 		if (other.tag == "EnergyContainer") {
-			//ps.gameObject.SetActive (false);
+			
+			if (containerPositionArray < other.GetComponent<EnergyContainer> ().containerPositionArray || other.GetComponent<EnergyContainer> ().containerPositionArray == 0) {
+				ps.gameObject.SetActive (false);
+			} else {
+				other.GetComponent<EnergyContainer> ().hasEnergy = false;
+				lm.decreaseStepWithEnergy (containerPositionArray);
+				containerPositionArray = 0;
+			}
 		}
 	}
 

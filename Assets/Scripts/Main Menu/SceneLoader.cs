@@ -9,10 +9,8 @@ public class SceneLoader : MonoBehaviour {
 	private MainMenu wc;
 	private int alreadyLoad;
 
-	[SerializeField]
-	private GameObject loadingText;
-	[SerializeField]
-	private GameObject mmc;
+	[SerializeField] private GameObject loadingText;
+	[SerializeField] private GameObject mmc;
 
 	void Start(){
 		alreadyLoad = 0;
@@ -32,7 +30,7 @@ public class SceneLoader : MonoBehaviour {
 	}
 
 	IEnumerator LoadNewScene() {
-		if(SceneManager.GetActiveScene().name == "MainMenu" && alreadyLoad == 0){
+		if (SceneManager.GetActiveScene ().name == "MainMenu" && alreadyLoad == 0) {
 			alreadyLoad = 1;
 			AsyncOperation async = null;
 			string levelToLoad = "Level" + wc.selectedLevel;
